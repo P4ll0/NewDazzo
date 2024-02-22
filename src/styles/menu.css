@@ -1,0 +1,125 @@
+*{
+    --card-height: 29rem;
+    --card-width: 19rem;
+}
+
+.main .card_container {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main .title {
+    padding-top: 70px;
+    text-align: center;
+    font-size: calc(3vw + 20px);
+}
+
+.main .card {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: .5rem;
+    overflow: hidden;
+    cursor: default;
+}
+
+.main .card img {
+    height: var(--card-width);
+    width: var(--card-width);
+    object-fit: cover;
+}
+
+.main .display .pizza_card .name,
+.main .card .name {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.main .display .pizza_card .description,
+.main .display .pizza_card .ingredienti,
+.main .card .ingredienti {
+    text-align: left;
+    padding: .5rem 1rem 0 1rem;
+    font-weight: 300;
+    font-size: small;
+}
+
+.main .display .pizza_card .prezzo,
+.main .card .prezzo {
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+.main .card:hover {
+    box-shadow: 0 0 20px 6px var(--text-color);
+    -webkit-box-shadow: 0 0 20px 6px var(--text-color);
+    -moz-box-shadow: 0 0 20px 6px var(--text-color);
+}
+
+
+
+
+.main .display{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000000;
+    background-color: #0000007c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.main .display .pizza_card{
+    width: 330px;
+    height: 500px;
+    border-radius: .5rem;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .display .pizza_card img{
+    width: 330px;
+    height: 230px;
+}
+
+.main .display .pizza_card .prezzo,
+.main .display .pizza_card .name{
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.main .display .pizza_card .glutenfree{
+    position: relative;
+    top: .5rem;
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 1px rgb(124, 206, 104);
+    color: rgb(124, 206, 104);
+    font-weight: bold;
+}
+
+.main .display .pizza_card .description{
+    background-color: #333;
+    padding: 5px;
+    margin: 1rem;
+}
