@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/styles/navbar.css">
     <link rel="stylesheet" href="src/styles/footer.css">
     <link rel="stylesheet" href="src/styles/menu.css">
+    <link rel="stylesheet" href="src/styles/src_bar.css">
 </head>
 
 <body>
@@ -40,10 +41,13 @@
 
     <!-- ------------------------- MAIN ------------------------- -->
     <main class="main">
+        <!-- search bar -->
+        <input type="text" id="mySearch" onkeyup="search()" placeholder="Search.." title="Type in a category">
+
         <h1 class="title">IL NOSTRO MENÙ</h1>
         <section class="card_container">
             <div class="display" style="display: none;">
-                <div class="pizza_card">
+                <div class="pizza_card" onclick="event.stopPropagation()">
                     <img src="" alt="pizza img">
                     <h3 class="name"></h3>
                     <p class="ingredienti"></p>
@@ -78,6 +82,11 @@
             <div class="card" id="Asparagi"></div>
             <div class="card" id="Crudaiola"></div>
         </section>
+
+        <h2 id="pizze_bianche">PIZZE BIANCHE</h2>
+        <section class="card_container">
+            <div class="card" id="Margherita"></div>
+        </section>
     </main>
 
 
@@ -110,6 +119,7 @@
     </footer>
 
     <script src="src/scripts/menu.js"></script>
+    <script src="src/scripts/src_bar.js"></script>
 </body>
 
 </html>
