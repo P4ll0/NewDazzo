@@ -1,0 +1,5 @@
+I NOMI VANNO DATI CON:
+ - La prima lettera maiuscola (Es: Margherita)
+ - Gli spazi sostituiti da '_' (Es: Misto_bosco)
+
+L'id delle pizze nel main deve essere identico al nome dell'immagine (Es: <div class="card" id="Margherita"></div>)

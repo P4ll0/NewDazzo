@@ -1,0 +1,25 @@
+/* Style the search box */
+#mySearch {
+    width: 70vw;
+    position: fixed;
+    left: auto;
+    right: 60px;
+    top: 10px;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #333;
+    border-radius: 5rem;
+    background-color: var(--bg-color);
+}
+
+
+
+
+/* DESKTOP GUI */
+
+@media (min-width: 620px) {
+    #mySearch {
+        position: absolute;
+        left: 15vw;
+    }
+}
