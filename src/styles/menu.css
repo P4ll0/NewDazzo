@@ -3,14 +3,22 @@
     --card-width: 19rem;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
 .main .card_container {
-    width: 100%;
-    padding: 1rem 0;
+    max-width: calc((var(--card-width) + 2rem) * 3);
+    position: relative;
+    align-self: center;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     align-content: center;
     justify-content: center;
     gap: 2rem;
+    padding: 2rem 0;
 }
 
 .main .title {
@@ -87,7 +95,7 @@
 
 .main .display .pizza_card {
     width: 330px;
-    height: 500px;
+    height: 600px;
     border-radius: .5rem;
     background-color: var(--text-color);
     color: var(--bg-color);
@@ -96,6 +104,7 @@
     display: flex;
     flex-direction: column;
     left: 60vw;
+    top: -10px;
     animation: displayCard .4s ease-in-out 1 both alternate;
 }
 
@@ -129,22 +138,81 @@
     text-align: left;
     padding-left: 1rem;
 }
+.main .display .pizza_card .container_details{
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+    height: 200px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main .display .pizza_card .box_details {
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    max-height: 20px;
+}
+
+
+/* dettagli */
 
 .main .display .pizza_card .glutenfree {
-    position: relative;
-    top: .5rem;
-    align-self: center;
-    border-radius: 10px;
-    padding: 10px;
-    border: solid 1px rgb(124, 206, 104);
-    color: rgb(124, 206, 104);
-    font-weight: bold;
+    border: solid 1px #977f3d;
+    color: #977f3d;
+    filter: drop-shadow(0 0 .8rem #977f3d);
 }
+
+.main .display .pizza_card .bianca {
+    border: solid 1px #cfcfcf;
+    color: #cfcfcf;
+    filter: drop-shadow(0 0 .8rem #cfcfcf);
+}
+
+.main .display .pizza_card .vegan {
+    border: solid 1px #488b34;
+    color: #488b34;
+    filter: drop-shadow(0 0 .8rem #488b34);
+}
+
+.main .display .pizza_card .farina_integrale {
+    border: solid 1px #6b5133;
+    color: #6b5133;
+    filter: drop-shadow(0 0 .8rem #6b5133);
+}
+
+.main .display .pizza_card .senza_lievito {
+    border: solid 1px #86745e;
+    color: #86745e;
+    filter: drop-shadow(0 0 .8rem #86745e);
+}
+
+.main .display .pizza_card .ingr_locali {
+    border: solid 1px #437247;
+    color: #437247;
+    filter: drop-shadow(0 0 .8rem #437247);
+}
+
+.main .display .pizza_card .crosta_sottile {
+    border: solid 1px #412d14;
+    color: #412d14;
+    filter: drop-shadow(0 0 .8rem #412d14);
+}
+
+/* dettagli */
+
 
 .main .display .pizza_card .description {
     background-color: #333;
     padding: 5px;
     margin: 1rem;
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.main .display .pizza_card .description::-webkit-scrollbar {
+    display: none;
 }
 
 /* sezione pizze bianche */

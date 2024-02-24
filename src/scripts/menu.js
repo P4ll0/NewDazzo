@@ -80,7 +80,14 @@ fetch("src\\scripts\\pizze.csv")
             let ingredienti = document.querySelector(".display .ingredienti");
             let name = document.querySelector(".display .name");
             let description = document.querySelector(".display .description");
+            // particolarita'
             let glutenfree = document.querySelector(".display .glutenfree");
+            let bianca = document.querySelector(".display .bianca");
+            let vegan = document.querySelector(".display .vegan");
+            let farina_integrale = document.querySelector(".display .farina_integrale");
+            let senza_lievito = document.querySelector(".display .senza_lievito");
+            let ingr_locali = document.querySelector(".display .ingr_locali");
+            let crosta_sottile = document.querySelector(".display .crosta_sottile");
 
             //metti le informazioni nel div.display e rendilo visibile. poi fai un eventlistener per renderlo invisibile     !!!
             display.style.display = "flex";
@@ -92,9 +99,16 @@ fetch("src\\scripts\\pizze.csv")
             prezzo.textContent = "€ " + itemPizza[headings[2]].replaceAll(".", ",");
             ingredienti.textContent = itemPizza[headings[1]].replaceAll(" ", ", ").replaceAll("_", " ");
             name.textContent = itemPizza[headings[0]].toUpperCase().replaceAll("_", " ");
-            description.textContent = itemPizza[headings[4]];
+            description.textContent = itemPizza[headings[headings.length-1]];
 
-            glutenfree.style.display = itemPizza[headings[3]] === "true" ? "block" : "none";
+            // particolarita'
+            glutenfree.style.display = itemPizza[headings[3]] === "true" ? "" : "none";
+            bianca.style.display = itemPizza[headings[4]] === "true" ? "" : "none";
+            vegan.style.display = itemPizza[headings[5]] === "true" ? "" : "none";
+            farina_integrale.style.display = itemPizza[headings[6]] === "true" ? "" : "none";
+            senza_lievito.style.display = itemPizza[headings[7]] === "true" ? "" : "none";
+            ingr_locali.style.display = itemPizza[headings[8]] === "true" ? "" : "none";
+            crosta_sottile.style.display = itemPizza[headings[9]] === "true" ? "" : "none";
         }
 
         //funzione che mi trova la pizza in base al nome

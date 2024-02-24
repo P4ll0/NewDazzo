@@ -44,7 +44,7 @@
         <!-- search bar -->
         <input type="text" id="mySearch" onkeyup="search()" placeholder="Search.." title="Type in a category">
 
-        <h1 class="title">IL NOSTRO MENÙ</h1>
+        <h2 class="title">IL NOSTRO MENÙ</h2>
         <section class="card_container">
             <div class="display" style="display: none;">
                 <div class="pizza_card" onclick="event.stopPropagation()">
@@ -53,7 +53,15 @@
                     <p class="ingredienti"></p>
                     <p class="prezzo"></p>
                     <p class="description"></p>
-                    <div class="glutenfree">GLUTEN FREE</div>
+                    <div class="container_details">
+                        <div class="glutenfree box_details">GLUTEN FREE</div>
+                        <div class="bianca box_details">BIANCA</div>
+                        <div class="vegan box_details">VEGAN</div>
+                        <div class="farina_integrale box_details">FARINA INTEGRALE</div>
+                        <div class="senza_lievito box_details">IMPASTO SENZA LIEVITO</div>
+                        <div class="ingr_locali box_details">INGREDIENTI LOCALI</div>
+                        <div class="crosta_sottile box_details">CROSTA SOTTILE</div>
+                    </div>
                 </div>
             </div>
             <!-- gli spazi non ci devono essere ne negli id ne nella sezione pizza del csv -->
@@ -85,7 +93,16 @@
 
         <h2 id="pizze_bianche">PIZZE BIANCHE</h2>
         <section class="card_container">
-            <div class="card" id="Margherita"></div>
+            <div class="card" id="Gio_Jo"></div>
+            <div class="card" id="New_New"></div>
+            <div class="card" id="Don_Malò"></div>
+            <div class="card" id="Al_Salmone"></div>
+            <div class="card" id="Sfizio"></div>
+            <div class="card" id="Tartufy"></div>
+            <div class="card" id="Francese"></div>
+            <div class="card" id="Toty"></div>
+            <div class="card" id="Squacquerone(1)"></div>
+            <div class="card" id="Squacquerone(2)"></div>
         </section>
     </main>
 

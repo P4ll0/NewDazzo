@@ -1,25 +1,35 @@
-PIZZA,INGREDIENTI,PREZZO,GLUTEN-FREE,DESCRIZIONE
-Marinara,pomodoro aglio origano,4.00,false,-
-Margherita,pomodoro mozzarella,5.00,true,Il classico in assoluto ad un prezzo imbattibile.
-Viennese,pomodoro mozzarella wrustel,5.50,false,-
-Diavola,pomodoro mozzarella salamino,6.00,false,-
-Prosciutto_funghi,pomodoro mozzarella prosciutto_cotto funghi,6.50,false,-
-Tonno_cipolla,pomodoro mozzarella patatine_fritte,6.50,false,-
-Verde_speck,pomodoro mozzarella gorgonzola speck,7.00,false,-
-Verdure,pomodoro mozzarella verdure_miste,8.00,false,-
-Capricciosa,pomodoro mozzarella prosciutto_cotto funghi carciofi olive,7.50,false,-
-4_stagioni,pomodoro mozzarella prosciutto_cotto funghi carciofi salamino,7.50,false,-
-4_formaggi,pomodoro mozzarella gorgonzola asiago grana,8.00,false,-
-Romana,pomodoro mozzarella capperi acciughe,6.50,false,-
-Porcini,pomodoro mozzarella porcini,7.50,false,-
-Misto_bosco,pomodoro mozzarella porcini champignon chiodini,9.00,false,-
-Trevisana,pomodoro mozzarella radicchio asiago speck,9.00,false,-
-Friarielli_salsiccia,pomodoro mozzarella friarielli salsiccia,9.00,false,-
-D.O.C.,pomodoro mozzarella_di_bufala,8.00,false,-
-Salsiccia,pomodoro mozzarella salsiccia,6.00,false,-
-Chip,pomodoro mozzarella patatine_fritte,6.00,false,-
-Parmigiana,pomodoro mozzarella melanzane,6.50,false,-
-Favorita,pomodoro mozzarella brie porchetta porcini,7.50,false,-
-Asparagi,pomodoro mozzarella asparagi,7.50,false,-
-Crudaiola,pomodoro mozzarella prosciutto_crudo,8.50,false,-
-Dazzo,pomodoro mozzarella rucola grana pomodorini,7.50,false,-
+PIZZA,INGREDIENTI,PREZZO,GLUTEN_FREE,BIANCA,VEGAN,FARINA_INTEGRALE,IMPASTO_SENZA_LIEVITO,INGREDIENTI_LOCALI,CROSTA_SOTTILE,DESCRIZIONE
+Marinara,pomodoro aglio origano,4.00,false,false,false,false,false,false,false,-
+Margherita,pomodoro mozzarella,5.00,true,true,true,true,true,true,true,Il classico in assoluto ad un prezzo imbattibile.
+Viennese,pomodoro mozzarella wrustel,5.50,false,false,false,false,false,false,false,-
+Diavola,pomodoro mozzarella salamino,6.00,false,false,false,false,false,false,false,-
+Prosciutto_funghi,pomodoro mozzarella prosciutto_cotto funghi,6.50,false,false,false,false,false,false,false,-
+Tonno_cipolla,pomodoro mozzarella patatine_fritte,6.50,false,false,false,false,false,false,false,-
+Verde_speck,pomodoro mozzarella gorgonzola speck,7.00,false,false,false,false,false,false,false,-
+Verdure,pomodoro mozzarella verdure_miste,8.00,false,false,false,false,false,false,false,-
+Capricciosa,pomodoro mozzarella prosciutto_cotto funghi carciofi olive,7.50,false,false,false,false,false,false,false,-
+4_stagioni,pomodoro mozzarella prosciutto_cotto funghi carciofi salamino,7.50,false,false,false,false,false,false,false,-
+4_formaggi,pomodoro mozzarella gorgonzola asiago grana,8.00,false,false,false,false,false,false,false,-
+Romana,pomodoro mozzarella capperi acciughe,6.50,false,false,false,false,false,false,false,-
+Porcini,pomodoro mozzarella porcini,7.50,false,false,false,false,false,false,false,-
+Misto_bosco,pomodoro mozzarella porcini champignon chiodini,9.00,false,false,false,false,false,false,false,-
+Trevisana,pomodoro mozzarella radicchio asiago speck,9.00,false,false,false,false,false,false,false,-
+Friarielli_salsiccia,pomodoro mozzarella friarielli salsiccia,9.00,false,false,false,false,false,false,false-
+D.O.C.,pomodoro mozzarella_di_bufala,8.00,false,false,false,false,false,false,false,-
+Salsiccia,pomodoro mozzarella salsiccia,6.00,false,false,false,false,false,false,false,-
+Chip,pomodoro mozzarella patatine_fritte,6.00,false,false,false,false,false,false,false,-
+Parmigiana,pomodoro mozzarella melanzane,6.50,false,false,false,false,false,false,false,-
+Favorita,pomodoro mozzarella brie porchetta porcini,7.50,false,false,false,false,false,false,false,-
+Asparagi,pomodoro mozzarella asparagi,7.50,false,false,false,false,false,false,false,-
+Crudaiola,pomodoro mozzarella prosciutto_crudo,8.50,false,false,false,false,false,false,false,-
+Dazzo,pomodoro mozzarella rucola grana pomodorini,7.50,false,false,false,false,false,false,false,-
+Gio_Jo,mozzarella rucola pomodorini pesto bufala,9.00,false,true,false,false,false,false,false,-
+New_New,mozzarella asiago porcini radicchio asparagi,9.00,false,true,false,false,false,false,false,-
+Don_Malò,bufala rucola crudo grana_a_scaglie asiago,9.00,false,true,false,false,false,false,false,-
+Al_Salmone,mozzarella salmone,9.00,false,true,false,false,false,false,false,-
+Sfizio,mozzarella burrata prosciutto_cotto,8.50,false,true,false,false,false,false,false,-
+Tartufy,mozzarella porcini crema_di_tartufo rucola grana,8.50,false,true,false,false,false,false,false,-
+Francese,mozzarella gorgonzola pere_affettate_a_crudo,7.50,false,true,false,false,false,false,false,-
+Toty,mozzarella funghi radicchio pomodori grana_a_scaglie,8.50,false,false,false,false,false,false,false,-
+Squacquerone(1),squacquerone_al_forno prosciutto_crudo_fine_cottura,8.50,false,true,false,false,false,false,false,-
+Squacquerone(2),squacquerone_al_forno pancetta_fine_cottura,8.50,false,true,false,false,false,false,false,-
