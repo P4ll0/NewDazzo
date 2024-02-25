@@ -2,6 +2,7 @@
 #mySearch {
     width: 70vw;
     position: fixed;
+    z-index: 100;
     left: auto;
     right: 60px;
     top: 10px;

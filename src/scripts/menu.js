@@ -126,9 +126,15 @@ fetch("src\\scripts\\pizze.csv")
 
         //evento di chusura della finestra delle info
         const display = document.querySelector(".display");
+        const chiudiDisplay = () => {
+            display.style.display = "none";
+        }
 
         display.addEventListener("click", (e) => {
-            display.style.display = "none";
+            chiudiDisplay();
+        });
+        document.querySelector(".display .pizza_card .close").addEventListener("click", (e) => {
+            chiudiDisplay();
         });
     });
 

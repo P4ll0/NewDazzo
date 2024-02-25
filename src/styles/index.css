@@ -9,19 +9,65 @@
     height: calc(100vh - 74px);
     width: 100vw;
     background: url(../img/scritta_neon.jpeg) center center/cover no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 /* --------------------------------------------------------------------- SEZIONE 1 (menu) --------------------------------------------------------------------- */
 .main .menu {
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    padding-bottom: 20%;
+    gap: 4rem;
+    background-image: url(https://images.unsplash.com/photo-1599992836360-f88e279f8350?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-attachment: fixed;
 }
 
 .main .menu .title {
-    font-weight: 700;
-    font-size: xx-large;
+    font-weight: bold;
+    font-size: 3rem;
     text-align: center;
     padding: 2rem 0;
+    color: var(--text-special-color);
+}
+
+.main .menu .card_conatainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.main .menu .card {
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+    flex-direction: row;
+    width: 85vw;
+    height: 30vh;
+    background-color: var(--bg-color);
+    border-radius: 2px;
+}
+
+.main .menu .card img {
+    width: 60%;
+    object-fit: cover;
+}
+
+.main .menu .card h2 {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px;
+    background: url(../img/pizza.svg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
 }
 
 
@@ -37,4 +83,25 @@
         width: 100vw;
         background-position: center 60%;
     }
+
+
+    /* --------------------------------------------------------------------- SEZIONE 1 (menu) --------------------------------------------------------------------- */
+    .main .menu .title {
+        font-size: 5rem;
+    }
+
+    .main .menu .card_conatainer {
+        flex-direction: row;
+    }
+
+    .main .menu .card {
+        width: 45vw;
+    }
+
+    .main .menu .card h2 {
+        font-size: x-large;
+        background-size: 150%;
+        background-position: 30% 10%;
+    }
+
 }

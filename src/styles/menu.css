@@ -6,6 +6,10 @@
 .main {
     display: flex;
     flex-direction: column;
+    background-image: url(../img/pizza.svg);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 200vw;
 }
 
 .main .card_container {
@@ -36,6 +40,7 @@
     border-radius: .5rem;
     overflow: hidden;
     cursor: default;
+    cursor: pointer;
 }
 
 .main .card img {
@@ -138,14 +143,20 @@
     text-align: left;
     padding-left: 1rem;
 }
-.main .display .pizza_card .container_details{
+
+.main .display .pizza_card .container_details {
     display: flex;
     gap: 30px;
     padding: 20px 0;
     height: 200px;
     overflow: hidden;
+    overflow-y: scroll;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.main .display .pizza_card .container_details::-webkit-scrollbar {
+    width: 0;
 }
 
 .main .display .pizza_card .box_details {
@@ -212,7 +223,33 @@
 }
 
 .main .display .pizza_card .description::-webkit-scrollbar {
-    display: none;
+    width: 0;
+}
+
+.main .close {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    border-radius: 5rem;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.main .close::before,
+.main .close::after {
+    content: "";
+    height: 7px;
+    width: 30px;
+    background-color: white;
+    rotate: 45deg;
+    position: absolute;
+    top: 15px;
+}
+
+.main .close::after {
+    rotate: -45deg;
 }
 
 /* sezione pizze bianche */
