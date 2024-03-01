@@ -37,6 +37,7 @@
     --text-color: #0B0B0B;
     --text-special-color: #D49D65;
     --bg-color: #eee;
+    --bg-color-2: #aaa;
     --text-hover-color: var(--text-special-color);
     --text-selection-color: var(--text-special-color);
     --main-lateral-padding: 40px;
