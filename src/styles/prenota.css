@@ -15,7 +15,6 @@
     padding: 0 0 1rem 0;
     font-weight: bold;
     font-size: 1.5rem;
-    letter-spacing: .15rem;
 }
 
 .main .subtitle .subsub {
@@ -35,6 +34,12 @@
 .main #popup {
     color: var(--text-special-color);
     text-shadow: 0px 0px .5px #000;
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.main .leaflet-popup-content{
+    width: max-content;
 }
 
 .main .map_desc {
@@ -42,10 +47,33 @@
     padding-top: 3px;
     font-size: 1rem;
     letter-spacing: .1rem;
+    text-decoration: none;
+    color: rgb(35, 97, 6);
+    font-weight: 500;
+}
+
+.main .map_desc::before {
+    content: "";
+    display: inline-block;
+    margin: 0 10px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/map_icon.png);
+    background-repeat: no-repeat;
 }
 
 .main .leaflet-control-attribution {
     font-size: xx-small;
+    border-radius: 5px;
+}
+
+.main .leaflet-popup-content-wrapper{
+    background-color: #000;
+    width: fit-content;
+}
+
+.main .leaflet-popup-tip{
+    background: #000;
 }
 
 
@@ -115,7 +143,6 @@
     .main .map_desc {
         text-align: left;
         padding-top: 3px;
-        font-weight: 400;
         padding-left: 10vw;
     }
 

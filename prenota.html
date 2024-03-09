@@ -12,10 +12,15 @@
     <link rel="stylesheet" href="src/styles/prenota.css">
 
     <!--    LEAFLEETJS    -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
+        type="text/css">
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+    <script src="//unpkg.com/leaflet-gesture-handling"></script>
 </head>
 
 <body>
@@ -49,8 +54,8 @@
         <h2 class="title">PRENOTA</h2>
         <p class="subtitle">PRENOTA ORA, PRONTA IN 30 MINUTI<br><span class="subsub">anche da asporto</span></p>
         <!-- mappa -->
-        <div id="map" inert></div>
-        <p class="map_desc">36034 Malo VI, Piazza Guglielmo Marconi, 34</p>
+        <div id="map"></div>
+        <a class="map_desc" href="https://www.google.com/maps/dir//New+Dazzo,+Piazza+Guglielmo+Marconi,+Malo,+VI/@45.6565762,11.3644938,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4778b5630d68e72f:0xc9bad6521ed5853b!2m2!1d11.405779!2d45.6565236!3e0?hl=it&entry=ttu">36034 Malo VI, Piazza Guglielmo Marconi, 34</a>
         <!-- call to action (prenota) -->
         <div class="cta">
             <a href="tel:+390445044596"><button>PRENOTA ORA</button></a>
@@ -91,9 +96,9 @@
 
 
     <!-- script -->
-    <script src="src/scripts/footer.js"></script>
+    <script src="src/scripts/orari.js"></script>
     <script>
-        var map = L.map('map').setView([45.656537, 11.405774], 16);
+        var map = L.map('map', { gestureHandling: true }).setView([45.656537, 11.405774], 16);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors<br><a href="https://www.flaticon.com/free-icons/pizza" title="pizza icons">Pizza icons created by Freepik - Flaticon</a>'
@@ -107,7 +112,7 @@
             // shadowSize: [50, 64], // size of the shadow
             iconAnchor: [28, 56], // point of the icon which will correspond to marker's location
             // shadowAnchor: [4, 62],  // the same for the shadow
-            popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+            popupAnchor: [0, -56] // point from which the popup should open relative to the iconAnchor
         });
 
         L.marker([45.656537, 11.405774], { icon: pizzaIcon }).addTo(map)
