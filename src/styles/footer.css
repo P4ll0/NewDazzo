@@ -94,6 +94,19 @@
 }
 
 
+/* -------------------- CONTENITORE ATTRIBUTIONS X LICENZE FREE -------------------- */
+.footer .attribution{
+    width: 100%;
+    text-align: center;
+}
+
+.footer .attribution a{
+    text-decoration: none;
+    color: gray;
+    font-size: xx-small;
+}
+
+
 
 /* ----------------- DESKTOP GUI ----------------- */
 @media (min-width: 1281px) {

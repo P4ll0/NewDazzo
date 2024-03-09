@@ -1,0 +1,40 @@
+.main .title {
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-special-color);
+}
+
+.main .proprietari {
+    height: 94vw;
+    width: 94vw;
+    object-fit: cover;
+    position: relative;
+    left: -1vw;
+}
+
+.main .intro {
+    font-size: calc(15px + 1vw);
+}
+
+
+
+/* ----------------- DESKTOP GUI ----------------- */
+@media (min-width: 1281px) {
+    .main .proprietari {
+        min-height: 10rem;
+        min-width: 10rem;
+        height: calc(10vh + 30vw);
+        width: calc(10vh + 30vw);
+        left: 0;
+        float: left;
+        margin-right: calc(20px + 3vw);
+        margin-bottom: 20px;
+    }
+
+    .main .intro {
+        font-size: calc(10px + 1.5vw);
+        padding: 0 10%;
+    }
+}

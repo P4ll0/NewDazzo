@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info - New Dazzo</title>
+    <title>Prenota - New Dazzo</title>
     <link rel="shortcut icon" href="src/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/navbar.css">
     <link rel="stylesheet" href="src/styles/footer.css">
-    <link rel="stylesheet" href="src/styles/about.css">
+    <link rel="stylesheet" href="src/styles/prenota.css">
+
+    <!--    LEAFLEETJS    -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
@@ -39,13 +45,16 @@
 
     <!-- ------------------------- MAIN ------------------------- -->
     <main class="main">
-        <h2 class="title">CHI SIAMO</h2>
-        <img src="https://images.unsplash.com/photo-1558138838-76294be30005?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="I proprietari" class="proprietari">
-        <p class="intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam explicabo, non
-            praesentium qui optio, molestiae eaque sit quidem delectus aliquid asperiores, numquam sunt earum
-            temporibus porro cupiditate repudiandae quisquam atque similique? Dolore, corporis similique. Quasi
-            eligendi veniam beatae pariatur consequatur!</p>
+        <!-- titolo e sottotitolo -->
+        <h2 class="title">PRENOTA</h2>
+        <p class="subtitle">PRENOTA ORA, PRONTA IN 30 MINUTI<br><span class="subsub">anche da asporto</span></p>
+        <!-- mappa -->
+        <div id="map" inert></div>
+        <p class="map_desc">36034 Malo VI, Piazza Guglielmo Marconi, 34</p>
+        <!-- call to action (prenota) -->
+        <div class="cta">
+            <a href="tel:+390445044596"><button>PRENOTA ORA</button></a>
+        </div>
     </main>
 
 
@@ -75,8 +84,34 @@
         <div class="copiright">
             <pre>© 2024 Paolo Malgarin. Tutti i diritti riservati  -  <strong>MADE BY Paolo Malgarin.</strong></pre>
         </div>
-        <div class="attribution"><a href="https://www.freepik.com/icon/pizza_4853255#fromView=keyword&page=1&position=81&uuid=70090675-e226-4e38-82d7-934e55bdec29">Icon by andinur</a></div>
+        <div class="attribution"><a
+                href="https://www.freepik.com/icon/pizza_4853255#fromView=keyword&page=1&position=81&uuid=70090675-e226-4e38-82d7-934e55bdec29">Icon
+                by andinur</a></div>
     </footer>
+
+    <script>
+        var map = L.map('map').setView([45.656537, 11.405774], 16);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors<br><a href="https://www.flaticon.com/free-icons/pizza" title="pizza icons">Pizza icons created by Freepik - Flaticon</a>'
+        }).addTo(map);
+
+        var pizzaIcon = L.icon({
+            iconUrl: 'src/img/map_pin.png',
+            // shadowUrl: 'leaf-shadow.png',
+
+            iconSize: [56, 56], // size of the icon
+            // shadowSize: [50, 64], // size of the shadow
+            iconAnchor: [28, 56], // point of the icon which will correspond to marker's location
+            // shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+        });
+
+        L.marker([45.656537, 11.405774], { icon: pizzaIcon }).addTo(map)
+            .bindPopup('<span id="popup">New Dazzo</span>');
+
+        document.querySelector(".leaflet-control-zoom").style.display = "none";
+    </script>
 </body>
 
 </html>

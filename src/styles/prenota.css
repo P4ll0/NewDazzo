@@ -1,0 +1,156 @@
+/* titolo */
+.main .title {
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-special-color);
+}
+
+
+/* sottotitolo */
+.main .subtitle {
+    text-align: center;
+    line-height: 1.7rem;
+    padding: 0 0 1rem 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+}
+
+.main .subtitle .subsub {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+/* mappa */
+.main #map {
+    width: 100%;
+    height: 50vh;
+    margin-top: 2.2rem;
+}
+
+.main #popup {
+    color: var(--text-special-color);
+    text-shadow: 0px 0px .5px #000;
+}
+
+.main .map_desc {
+    text-align: center;
+    padding-top: 3px;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+
+.main .leaflet-control-attribution {
+    font-size: xx-small;
+}
+
+
+
+/* call to action (pulsante prenota) */
+.main .cta {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .cta button {
+    width: 80vw;
+    max-width: 800px;
+    height: 15vh;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-special-color);
+    border: solid 2px black;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    word-spacing: .5rem;
+}
+
+.main .cta button:hover {
+    background-color: var(--text-special-color-darker);
+    border: solid 2px #333;
+}
+
+.main .cta button:active {
+    background-color: var(--text-special-color-darker);
+    border: solid 2px #333;
+    box-shadow: 0 0 5px 1px #000;
+}
+
+.main .cta a {
+    text-decoration: none;
+}
+
+
+
+
+/* ----------------- DESKTOP GUI ----------------- */
+@media (min-width: 1281px) {
+
+    /* sottotitolo */
+    .main .subtitle {
+        font-size: 2rem;
+        letter-spacing: .3rem;
+        word-spacing: .25rem;
+    }
+
+    /* mappa */
+    .main #map {
+        margin: 0 10%;
+        margin-top: 3rem;
+        width: calc(100% - 20%);
+        border-radius: 1rem;
+    }
+
+    .main .map_desc {
+        text-align: left;
+        padding-top: 3px;
+        font-weight: 400;
+        padding-left: 10vw;
+    }
+
+
+
+    /* call to action (pulsante prenota) */
+    .main .cta button {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+/*                   MAPPA:                     */
+/*           https://leafletjs.com              */
+
+
+/* metti che la roba nel footer delle date si fa di un colore diverso in base a giorno della settimana */
+/* sfondo con foto del locale di sera */
+/* metti nell'index gli orari in grande al posto dell'about */
+/* metti il copyright sulla repository */
+
+
+/* 
+    FOTO PIZZE:
+
+    - quadrate
+    - alta qualità
+        + fare 3 versioni (schermo migliore del mio = max qualità, schermo pc = qualità media (da trovare con test su img default), schermo telefono/tablet = qualità bassa (tipo 700px))
+    - fatte con
+        + stesso angolo
+            - (meglio usare un piedistallo ferma telefono o mi metto io li un giorno intero a fare più foto possibili)
+        + stesse luci
+        + stesso sfondo
+        + stesso piatto
+    - la pizza deve essere più zoommata possibile ma si deve comunque vedere tutta, compreso il piatto
+*/

@@ -36,6 +36,7 @@
     /* gernerici */
     --text-color: #0B0B0B;
     --text-special-color: #D49D65;
+    --text-special-color-darker: #f0a860;
     --bg-color: #eee;
     --bg-color-2: #aaa;
     --text-hover-color: var(--text-special-color);
