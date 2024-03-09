@@ -86,7 +86,8 @@
 .main .orari_section .orari {
     list-style-type: none;
     text-align: right;
-    padding: .3rem;
+    padding: .3rem 0;
+    width: fit-content;
 }
 
 .main .orari_section .orari li {
@@ -99,11 +100,18 @@
 }
 
 .main .orari_section .title {
-    color: var(--text-special-color);
+    color: var(--text-special-color-darker);
     text-align: center;
     font-size: calc(50px + 2vw);
     padding-bottom: 3px;
     text-shadow: 0 0 10px var(--text-color);
+}
+
+.main .orari_section .subtitle {
+    text-align: center;
+    font-size: calc(10px + 2vw);
+    font-weight: 500;
+    padding-bottom: 3rem;
 }
 
 .main .orari_section .today {
@@ -111,7 +119,8 @@
     background: #000;
     border-radius: .5rem;
     padding-left: 10px !important;
-    padding-right: 10px !important
+    padding-right: 10px !important;
+    position: relative;
 }
 
 

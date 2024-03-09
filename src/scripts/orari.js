@@ -1,6 +1,6 @@
 const d = new Date();
 const orari = document.querySelectorAll(".footer .orari li");
-let today = d.getDay() - 1;
+var today = d.getDay() - 1;
 if (today < 0) {
     today = 6;
 }
@@ -13,5 +13,10 @@ orari[today].querySelectorAll("span").forEach(span => {
 
 // in caso di orari nel main
 const orariMain = document.querySelectorAll(".main .orari li");
-
 orariMain[today].classList.add("today");
+
+
+//aggiunta data orari main
+var mese = d.getMonth() + 1;
+(mese == 13)? mese = 1 : {};
+document.querySelector(".main .orari_section .subtitle").textContent = d.getDate() + "/" + mese + "/" + d.getFullYear();
