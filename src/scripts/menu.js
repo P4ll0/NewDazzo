@@ -43,11 +43,16 @@ fetch("src\\scripts\\pizze.csv")
             const img = document.createElement("img");
 
             //ci aggiungo il testo e il resto
-            if (imageExists("src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg")) {
-                img.setAttribute("src", "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg");
-            } else {
-                img.setAttribute("src", "src/img/Pizze/not_found.jpg");
-            }
+            let imgSrc = "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg";
+            fetch(imgSrc, { method: 'HEAD' })
+                .then(res => {
+                    if (res.ok) {
+                        img.setAttribute("src", "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg");
+                    } else {
+                        img.setAttribute("src", "src/img/Pizze/not_found.jpg");
+                        console.log('Image does not exist.');
+                    }
+                }).catch(err => console.log("Errore: Qualcosa è andato storto con le immagini del menu."));
             img.setAttribute("alt", item.getAttribute("id").toLowerCase());
             h3.textContent = itemPizza[headings[0]].toUpperCase().replaceAll("_", " ");
             h3.className = "name";
@@ -91,15 +96,20 @@ fetch("src\\scripts\\pizze.csv")
 
             //metti le informazioni nel div.display e rendilo visibile. poi fai un eventlistener per renderlo invisibile     !!!
             display.style.display = "flex";
-            if (imageExists("src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg")) {
-                img.setAttribute("src", "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg");
-            } else {
-                img.setAttribute("src", "src/img/Pizze/not_found.jpg");
-            }
+            let imgSrc = "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg";
+            fetch(imgSrc, { method: 'HEAD' })
+                .then(res => {
+                    if (res.ok) {
+                        img.setAttribute("src", "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg");
+                    } else {
+                        img.setAttribute("src", "src/img/Pizze/not_found.jpg");
+                        console.log('Image does not exist.');
+                    }
+                }).catch(err => console.log("Errore: Qualcosa è andato storto con le immagini del menu."));
             prezzo.textContent = "€ " + itemPizza[headings[2]].replaceAll(".", ",");
             ingredienti.textContent = itemPizza[headings[1]].replaceAll(" ", ", ").replaceAll("_", " ");
             name.textContent = itemPizza[headings[0]].toUpperCase().replaceAll("_", " ");
-            description.textContent = itemPizza[headings[headings.length-1]];
+            description.textContent = itemPizza[headings[headings.length - 1]];
 
             // particolarita'
             glutenfree.style.display = itemPizza[headings[3]] === "true" ? "" : "none";
@@ -137,14 +147,3 @@ fetch("src\\scripts\\pizze.csv")
             chiudiDisplay();
         });
     });
-
-function imageExists(image_url) {
-
-    var http = new XMLHttpRequest();
-
-    http.open('HEAD', image_url, false);
-    http.send();
-
-    return http.status != 404;
-
-}
