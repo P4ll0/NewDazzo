@@ -70,30 +70,48 @@
 }
 
 
-/* --------------------------------------------------------------------- SEZIONE 2 (about) --------------------------------------------------------------------- */
-.main .about {
-    min-height: 100vh;
-    padding: 8rem 4vw;
+/* --------------------------------------------------------------------- SEZIONE 2 (orari) --------------------------------------------------------------------- */
+.main .orari_section {
+    padding: 5rem 4vw;
+    background-image: url(../img/clock.svg);
+    background-size: calc(50vh + 50vw);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.main .about .title {
-    font-weight: bold;
-    font-size: 3rem;
-    text-align: center;
-    padding: 3rem 0;
+.main .orari_section .orari {
+    list-style-type: none;
+    text-align: right;
+    padding: .3rem;
+}
+
+.main .orari_section .orari li {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: calc(2px + .5vh) 0;
+    font-weight: 600;
+    font-size: calc(.6rem + 2.5vw);
+}
+
+.main .orari_section .title {
     color: var(--text-special-color);
+    text-align: center;
+    font-size: calc(50px + 2vw);
+    padding-bottom: 3px;
+    text-shadow: 0 0 10px var(--text-color);
 }
 
-.main .about .proprietari {
-    height: 94vw;
-    width: 94vw;
-    object-fit: cover;
-    position: relative;
-    left: -1vw;
-}
-
-.main .about .intro {
-    font-size: calc(15px + 1vw);
+.main .orari_section .today {
+    color: var(--text-special-color-darker);
+    background: #000;
+    border-radius: .5rem;
+    padding-left: 10px !important;
+    padding-right: 10px !important
 }
 
 
@@ -182,22 +200,15 @@
     }
 
 
-    /* --------------------------------------------------------------------- SEZIONE 2 (about) --------------------------------------------------------------------- */
-    .main .about .proprietari {
-        min-height: 10rem;
-        min-width: 10rem;
-        height: calc(10vh + 30vw);
-        width: calc(10vh + 30vw);
-        left: 0;
-        float: left;
-        margin-right: calc(20px + 3vw);
-        margin-bottom: 20px;
+    /* --------------------------------------------------------------------- SEZIONE 2 (orari) --------------------------------------------------------------------- */
+    .main .orari_section .orari li {
+        padding: calc(2px + 1vh) 0;
     }
 
-    .main .about .intro {
-        font-size: calc(10px + 1.5vw);
-        padding: 0 10%;
+    .main .orari_section .title {
+        padding-bottom: 20px;
     }
+
 
     /* --------------------------------------------------------------------- SEZIONE 3 (cosa abbiamo in più degli altri) --------------------------------------------------------------------- */
     .main .specialita h3 {

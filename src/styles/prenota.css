@@ -67,7 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--text-special-color);
+    background-color: var(--text-special-color-darker);
     border: solid 2px black;
     border-radius: 1rem;
     font-size: 2rem;
@@ -77,12 +77,12 @@
 }
 
 .main .cta button:hover {
-    background-color: var(--text-special-color-darker);
+    background-color: var(--text-special-color);
     border: solid 2px #333;
 }
 
 .main .cta button:active {
-    background-color: var(--text-special-color-darker);
+    background-color: var(--text-special-color);
     border: solid 2px #333;
     box-shadow: 0 0 5px 1px #000;
 }
