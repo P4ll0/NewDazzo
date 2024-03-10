@@ -43,13 +43,13 @@ fetch("src\\scripts\\pizze.csv")
             const img = document.createElement("img");
 
             //ci aggiungo il testo e il resto
-            let imgSrc = "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg";
+            let imgSrc = "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".webp";
             fetch(imgSrc, { method: 'HEAD' })
                 .then(res => {
                     if (res.ok) {
-                        img.setAttribute("src", "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg");
+                        img.setAttribute("src", "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".webp");
                     } else {
-                        img.setAttribute("src", "src/img/Pizze/not_found.jpg");
+                        img.setAttribute("src", "src/img/Pizze/not_found.webp");
                         console.log('Image does not exist.');
                     }
                 }).catch(err => console.log("Errore: Qualcosa è andato storto con le immagini del menu."));
@@ -96,13 +96,13 @@ fetch("src\\scripts\\pizze.csv")
 
             //metti le informazioni nel div.display e rendilo visibile. poi fai un eventlistener per renderlo invisibile     !!!
             display.style.display = "flex";
-            let imgSrc = "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg";
+            let imgSrc = "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".webp";
             fetch(imgSrc, { method: 'HEAD' })
                 .then(res => {
                     if (res.ok) {
-                        img.setAttribute("src", "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".jpg");
+                        img.setAttribute("src", "src/img/Pizze/" + itemPizza[headings[0]].toLowerCase() + ".webp");
                     } else {
-                        img.setAttribute("src", "src/img/Pizze/not_found.jpg");
+                        img.setAttribute("src", "src/img/Pizze/not_found.webp");
                         console.log('Image does not exist.');
                     }
                 }).catch(err => console.log("Errore: Qualcosa è andato storto con le immagini del menu."));
