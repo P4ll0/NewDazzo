@@ -7,7 +7,7 @@
 .main .hero {
     height: calc(100vh - 74px);
     width: 100vw;
-    background: url(../img/scritta_neon.jpeg) center center/cover no-repeat;
+    background: url(../img/scritta_neon.webp) center center/cover no-repeat;
     /* background-attachment: fixed; */
 }
 
@@ -18,7 +18,7 @@
     padding-top: 10%;
     padding-bottom: 30vh;
     gap: 4rem;
-    background-image: url(../img/bg_legna.avif);
+    background-image: url(../img/bg_legna.webp);
     background-attachment: fixed;
 }
 
