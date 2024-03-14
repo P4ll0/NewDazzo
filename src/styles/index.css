@@ -70,7 +70,65 @@
 }
 
 
-/* --------------------------------------------------------------------- SEZIONE 2 (orari) --------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------- SEZIONE 2 (dove siamo) --------------------------------------------------------------------- */
+.main .position {
+    height: 100vh;
+    background-image: url(../img/bg/map_bg.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main .position h3 {
+    text-align: center;
+    font-weight: 400;
+    top: 20px;
+    font-size: calc(20px + 1vw);
+    text-shadow: 0 0 5px var(--bg-color);
+}
+
+.main .position h2 {
+    color: var(--text-special-color);
+    text-align: center;
+    font-size: calc(35px + 2vw);
+    padding: 0 10%;
+    text-shadow: 0 0 5px var(--text-color);
+}
+
+.main .position a {
+    margin-top: 10vh;
+}
+
+.main .position img {
+    width: calc(10vw + 12vh);
+    height: calc(10vw + 12vh);
+}
+
+.main .position .credits,
+.main .position .credits * {
+    text-decoration: none;
+    color: var(--text-color);
+    text-shadow: none;
+    font-weight: 300;
+    font-size: small;
+}
+
+.main .position .credits{
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    padding: 1px;
+}
+
+
+/* --------------------------------------------------------------------- SEZIONE 3 (orari) --------------------------------------------------------------------- */
 .main .orari_section {
     padding: 5rem 4vw;
     background-image: url(../img/clock.svg);
@@ -125,56 +183,6 @@
 
 
 
-/* --------------------------------------------------------------------- SEZIONE 3 (cosa abbiamo in più degli altri) --------------------------------------------------------------------- */
-.main .specialita {
-    height: 100vh;
-    background-image: url(../img/Materie_prime/bg_specialita.webp);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
-    text-shadow: 0 0 5px var(--text-color);
-}
-
-.main .specialita h3 {
-    text-align: center;
-    font-weight: 300;
-    position: absolute;
-    top: 20px;
-    font-size: small;
-}
-
-.main .specialita h2 {
-    color: var(--text-special-color);
-    text-align: center;
-    font-size: calc(35px + 2vw);
-    padding: 0 10%;
-}
-
-.main .specialita p {
-    padding: 0 10%;
-    font-size: calc(15px + 1vw);
-}
-
-.main .specialita .credits * {
-    text-decoration: none;
-    color: #eee;
-    position: absolute;
-    bottom: 1px;
-    left: 1px;
-    cursor: default;
-    text-shadow: none;
-    font-weight: 300;
-    font-size: small;
-}
-
-
-
 
 /* ----------------- DESKTOP GUI ----------------- */
 @media (min-width: 1281px) {
@@ -209,19 +217,16 @@
     }
 
 
-    /* --------------------------------------------------------------------- SEZIONE 2 (orari) --------------------------------------------------------------------- */
+    /* --------------------------------------------------------------------- SEZIONE 2 (dove siamo) --------------------------------------------------------------------- */
+
+
+    /* --------------------------------------------------------------------- SEZIONE 3 (orari) --------------------------------------------------------------------- */
     .main .orari_section .orari li {
         padding: calc(2px + 1vh) 0;
+        font-size: calc(.6rem + 1.8vw);
     }
 
     .main .orari_section .title {
         padding-bottom: 20px;
     }
-
-
-    /* --------------------------------------------------------------------- SEZIONE 3 (cosa abbiamo in più degli altri) --------------------------------------------------------------------- */
-    .main .specialita h3 {
-        font-size: x-large;
-    }
-
 }
