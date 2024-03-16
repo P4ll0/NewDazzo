@@ -59,7 +59,13 @@
     margin: 0 10px;
     width: 16px;
     height: 16px;
-    background: url(../img/map_icon.png);
+    background: url(../img/icons/maps_icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main .map_desc:hover::before {
+    background: url(../img/icons/maps_icon_hover.svg);
     background-repeat: no-repeat;
     background-size: contain;
 }

@@ -1,3 +1,9 @@
+.main {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
 .main .title {
     font-weight: bold;
     font-size: 3rem;
@@ -6,35 +12,72 @@
     color: var(--text-special-color);
 }
 
+.main .history_container,
+main .container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.main .storia,
 .main .proprietari {
     height: 94vw;
     width: 94vw;
     object-fit: cover;
-    position: relative;
-    left: -1vw;
+    align-self: center;
 }
 
+.main .storia {
+    height: 57vw;
+}
+
+.main .description,
 .main .intro {
+    display: block;
     font-size: calc(15px + 1vw);
+    padding: 10px;
 }
 
+#history {
+    margin-top: 10vh;
+}
 
+main #reverse {
+    /*contenitore in mezzo (2°)*/
+    flex-direction: column-reverse;
+    gap: 20px;
+}
 
 /* ----------------- DESKTOP GUI ----------------- */
 @media (min-width: 1281px) {
-    .main .proprietari {
-        min-height: 10rem;
-        min-width: 10rem;
-        height: calc(10vh + 30vw);
-        width: calc(10vh + 30vw);
-        left: 0;
-        float: left;
-        margin-right: calc(20px + 3vw);
-        margin-bottom: 20px;
+
+    #history {
+        margin-top: 8vw;
     }
 
+    .main .title {
+        font-size: 5rem;
+    }
+
+    .main .container {
+        flex-direction: row !important;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .main .proprietari {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .main .description,
     .main .intro {
         font-size: calc(10px + 1.5vw);
-        padding: 0 10%;
+        max-width: 45vw;
+    }
+
+    .main .storia {
+        height: calc(10vw + 10vh);
+        width: calc(20vw + 10vh);
     }
 }

@@ -7,7 +7,7 @@
 .main .hero {
     height: calc(100vh - 74px);
     width: 100vw;
-    background: url(../img/scritta_neon.webp) center center/cover no-repeat;
+    background: url(../img/bg/scritta_neon.webp) center center/cover no-repeat;
     /* background-attachment: fixed; */
 }
 
@@ -18,7 +18,7 @@
     padding-top: 10%;
     padding-bottom: 30vh;
     gap: 4rem;
-    background-image: url(../img/bg_legna.webp);
+    background-image: url(../img/bg/bg_legna.webp);
     background-attachment: fixed;
 }
 
@@ -63,7 +63,7 @@
     font-size: medium;
     font-weight: 700;
     padding: 10px;
-    background: url(../img/pizza.svg);
+    background: url(../img/bg/pizza.svg);
     background-size: cover;
     background-repeat: repeat-x;
     background-attachment: fixed;
@@ -106,6 +106,10 @@
     margin-top: 10vh;
 }
 
+.main .position a img:hover {
+    content: url(../img/icons/maps_icon_hover.svg);
+}
+
 .main .position img {
     width: calc(10vw + 12vh);
     height: calc(10vw + 12vh);
@@ -120,7 +124,7 @@
     font-size: small;
 }
 
-.main .position .credits{
+.main .position .credits {
     position: absolute;
     bottom: 1px;
     left: 1px;
@@ -131,7 +135,7 @@
 /* --------------------------------------------------------------------- SEZIONE 3 (orari) --------------------------------------------------------------------- */
 .main .orari_section {
     padding: 5rem 4vw;
-    background-image: url(../img/clock.svg);
+    background-image: url(../img/bg/clock.svg);
     background-size: calc(50vh + 50vw);
     background-position: center;
     background-repeat: no-repeat;

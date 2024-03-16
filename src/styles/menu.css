@@ -6,7 +6,7 @@
 .main {
     display: flex;
     flex-direction: column;
-    background-image: url(../img/pizza.svg);
+    background-image: url(../img/bg/pizza.svg);
     background-repeat: repeat-y;
     background-position: center;
     background-size: 200vw;
